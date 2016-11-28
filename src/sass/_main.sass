@@ -1,0 +1,318 @@
+.wrapper
+	padding-bottom: 135px
+	position: relative
+	overflow: hidden
+	margin: 0 auto
+	min-height: 100%
+	background-image: url(../img/bg/bg-top.png), url(../img/bg/bg-bot.png)
+	background-repeat: no-repeat
+	background-position: top right, bottom 75px left
+	background-color: #101a25
+	+r(1299)
+		background-position: top right -470px, bottom 75px left
+	+r(1023)
+		padding-bottom: 77px
+		background-position: top right -550px, bottom -50px left
+	+r(769)
+		padding-bottom: 0
+	+r(755)
+		background-position: top 0px right -345px, bottom left
+		background-size: 600px 110px, 0 0
+
+.header
+	padding: 25px 0 43px
+	+r(1299)
+		padding-bottom: 30px
+	+r(755)
+		padding: 10px 0
+	&__container
+		display: flex
+		justify-content: space-between
+		align-items: flex-end
+		max-width: 1354px
+		margin: 0 auto
+		padding: 0 20px
+		+r(1299)
+			flex-direction: column
+			align-items: flex-start
+		+r(1023)
+			flex-direction: row
+		+r(755)
+			flex-direction: column
+			padding:  0 10px
+
+.logo
+	display: block
+	margin-left: -7px
+	width: 176px
+	height: 62px
+	+r(1299)
+		margin-bottom: 20px
+	+r(755)
+		float: none
+		margin: 0 auto 20px
+.balance
+	width: 86.605783%
+	display: flex
+	justify-content: flex-end
+	+r(1299)
+		width: 100%
+		justify-content: space-between
+	+r(1023)
+		flex-direction: column
+		width: 72%
+		margin-left: auto
+	+r(755)
+		width: 100%
+	&__col
+		display: flex
+		align-items: center
+		+r(1299)
+			align-items: center
+			flex-basis: 49%
+		+r(1023)
+			justify-content: flex-start
+		+r(755)
+			justify-content: space-between
+		& + &
+			+r(470)
+				margin-top: 5px
+		&:nth-of-type(1) :nth-child(3)
+			+r(1023)
+				margin-right: 12px
+		&--first
+			position: relative
+			margin-right: 52px
+			+r(1299)
+				margin-right: 0
+			&::before
+				content: ''
+				position: absolute
+				top: -45px
+				right: -28px
+				width: 1px
+				height: 85px
+				background-color: #2f3842
+				+r(1299)
+					height: 35px
+					top: 3px
+					right: -12px
+				+r(1023)
+					display: none
+					content: none
+	&__label
+		margin-right: 20px
+		font-size: 13px
+		color: rgba(#fff, .4)
+		+r(1299)
+			margin-right: 7px
+		&--mobile
+			margin-right: 13px
+			+r(755)
+				display: none
+		&--first
+			+r(1023)
+				margin-right: 16px
+	&__bill
+		margin-right: 20px
+		font-size: 40px
+		line-height: 1
+		+roboto-light
+		color: #e81d25
+		+r(1299)
+			margin-right: 7px
+		+r(1023)
+			margin-right: 21px
+		+r(470)
+			margin-right: 6px
+			font-size: 30px
+		&--second
+			color: #aa7e3a
+			+r(1023)
+				margin-right: 46px
+			+r(755)
+				margin-right: 46px
+			+r(470)
+				margin-right: 25px
+	&__form
+		display: flex
+		+r(1299)
+			flex-grow: 1
+		+r(1023)
+			justify-content: flex-end
+		+r(755)
+
+		+r(470)
+			justify-content: flex-start
+			margin-left: 14px
+	&__input
+		width: 140px
+		color: #fff
+		font-size: 20px
+		height: 35px
+		text-align: center
+		border: 1px solid #28313b
+		border-right: none
+		background-color: #101a25
+		-webkit-appearance: none
+		border-radius: 0
+		+roboto-light
+		+placeholder
+			color: #fff
+		+r(1299)
+			flex-basis: 55%
+		+r(470)
+			width: 75px
+			height: 30px
+	&__btn
+		padding: 0 5px
+		width: 110px
+		height: 35px
+		font-size: 13px
+		text-transform: uppercase
+		color: #fff
+		background-color: #e81d25
+		+roboto-bold
+		transition: background-color .2s ease-in
+		&:hover
+			background-color: darken(#e81d25, 15)
+		&--color
+			background-color: #aa7e3a
+			&:hover
+				background-color: darken(#aa7e3a, 15)
+		br
+			+rm(470)
+				display: none
+		+r(1299)
+			flex-basis: 45%
+		+r(470)
+			width: 70px
+			font-size: 12px
+			height: 30px
+.games
+	&__inner
+		pointer-events: none
+		position: relative
+		margin-left: -6px
+		margin-right: -6px
+		+clr
+		+r(755)
+			margin-left: -5px
+			margin-right: -5px
+		&:hover .games__item::before
+			opacity: 1
+	&__inner &__item:hover::before
+		opacity: 0
+	&__col
+		position: relative
+		float: left
+		width: calc(33.333333% - 12px)
+		margin: 6px
+		z-index: 1
+		+r(1023)
+			width: calc(50% - 12px)
+		+r(755)
+			margin: 5px
+			width: calc(50% - 10px)
+	&__item
+		pointer-events: auto
+		position: relative
+		display: block
+		text-decoration: none
+		transition: all .3s ease-in-out
+		z-index: 1
+		&::before
+			opacity: 0
+			content: ''
+			position: absolute
+			top: 0
+			left: 0
+			right: 0
+			bottom: 0
+			background-color: rgba(#101a25, .7)
+			z-index: 1
+			transition: opacity .3s ease-in-out
+		&:hover
+			box-shadow: 0 0 87px 15px rgba(#e81d25, .3)
+			z-index: 5
+		&:hover .games__btn
+			background-color: #e81d25
+		&:hover .games__icon
+			color: #fff
+	&__inner &__item:hover::before
+		opacity: 0
+	&__btn
+		position: relative
+		padding: 15px 0
+		font-size: 14px
+		color: #fff
+		letter-spacing: 0.05em
+		text-transform: uppercase
+		text-align: center
+		text-indent: 6px
+		background-color: #1c2630
+		+roboto-bold
+		transition: background-color .3s ease-in-out
+		+r(755)
+			padding: 8px 0 6px
+			font-size: 12px
+	&__icon
+		display: inline-block
+		vertical-align: middle
+		position: relative
+		right: 20px
+		font-size: 30px
+		transition: color .3s ease-in-out
+		color: #e21d25
+		+r(755)
+			font-size: 16px
+			top: -2px
+			right: 10px
+
+.footer
+	position: relative
+	margin-top: -135px
+	padding: 57px 0
+	text-align: center
+	+r(1023)
+		margin-top: -77px
+		padding: 28px 0
+	+r(769)
+		display: none
+	&__col
+		width: 33.33333%
+		float: left
+		+clr
+		&:nth-child(1)
+			width: 20%
+		&:nth-child(2)
+			width: 60%
+		&:nth-child(3)
+			width: 20%
+	&__copy
+		float: left
+		color: rgba(#fff, .4)
+	&__nav
+		font-size: 0
+		a
+			display: inline-block
+			margin: 0 18px
+			text-decoration: none
+			font-size: 15px
+			color: #fff
+			+trs
+			&:hover
+				color: rgba(#fff, .4)
+	&__social
+		float: right
+.social
+	a
+		float: left
+		font-size: 17px
+		color: #585f67
+		text-decoration: none
+		transition: color .2s ease-in
+		& + a
+			margin-left: 27px
+		&:hover
+			color: #fff

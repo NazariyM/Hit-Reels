@@ -1,0 +1,35 @@
+// fonts
++font(Roboto-Light, Roboto-Light)
++font(Roboto-Regular, Roboto-Regular)
++font(Roboto-Bold, Roboto-Bold)
+
+=roboto-light
+	font-family: 'Roboto-Light', Arial, sans-serif
+=roboto-reg
+	font-family: 'Roboto-Regular', Arial, sans-serif
+=roboto-bold
+	font-family: 'Roboto-Bold', Arial, sans-serif
+
+// basic transition
+=trs
+	transition: .2s ease-in
+
+body
+	font-size: 15px
+	font-family: 'Roboto-Regular', Arial, sans-serif
+	line-height: 1.153846
+
+// common blocks
+
+.container
+	max-width: 1354px
+	margin: 0 auto
+	padding: 0 20px
+	+clr
+	+r(767)
+		padding: 0 10px
+
+img
+	display: block
+	max-width: 100%
+	width: 100%
